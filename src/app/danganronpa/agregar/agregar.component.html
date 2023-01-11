@@ -1,0 +1,34 @@
+<h3>Agregar <small>{{nuevo.nombre}}</small></h3>
+        <hr>
+        <form (ngSubmit)="agregar()">
+            <input 
+                type="text" 
+                placeholder="Nombre"
+                name="nombre"
+                [(ngModel)]="nuevo.nombre"
+                />
+            <input 
+                type="number" 
+                placeholder="Poder" 
+                name="poder"
+                [(ngModel)]="nuevo.poder"/>
+            <button type="submit">
+                Agregar
+            </button>
+        </form>
+        
+<!--two-way data binding: desde el html podemos cambiar el valor de una
+propiedad definida en el ts, como hemos hecho aquí con ngModel (que tanto
+emite como escucha) -->
+
+<!--Entonces, para hacer eso, lo primero es que es obligatorio poner la propiedad 
+    name con un nombre, porque sí. El ngModel es a la vez un evento (pues
+    cuando el usuario introduce valores, cambia el ts) y una variable 
+    desestructurada (pues inicialmente coge el valor del ts)-->
+
+<!--En cuanto a los submit. Por un lado está el evento ngSubmit que cuando sucede,
+ejecuta la función agregar(). ¿Y cuándo sucede el submit? Cuando se pulsa el 
+botón de agregar, que para eso le hemos asignado un type=submit. -->
+
+<!--En el componente, los 'this' apuntan todo el rato a la clase agregarComponent,
+que es modificada en ocasiones por el ngModel (valor que introduce el usuario)-->

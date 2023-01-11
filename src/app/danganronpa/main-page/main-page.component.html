@@ -1,0 +1,20 @@
+<h1>Danganronpa</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personajes></app-personajes>
+    </div>
+    <div class="col">
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+    </div>
+</div>
+
+<!-- Antes teníamos dentro de app-agregar:
+(onNuevoPersonaje)="agregarNuevoPersonaje($event)"
+
+    ahí el $event realmente es un personaje. Lo que estamos haciendo con el 
+$event es algo así como pasarle a la función agregarNuevoPersonaje
+lo emitido por el evento  -->
+
+
